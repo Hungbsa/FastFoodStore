@@ -1,0 +1,300 @@
+
+        :root {
+            --primary-color: #16a34a;
+            --primary-dark: #15803d;
+            --secondary-bg: #e0f2f7;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+            --card-bg: #fff;
+            --shadow-light: rgba(0,0,0,0.08);
+            --shadow-medium: rgba(0,0,0,0.15);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #22c55e 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            padding: 20px;
+        }
+        
+        .main-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .main-header .circle-logo {
+            background-color: #fff;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+        .main-header .circle-logo i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        .main-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .main-header p {
+            color: #e5e5e5;
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+
+        .auth-wrapper {
+            max-width: 450px; /* Chiều rộng mặc định cho login */
+            width: 100%;
+            transition: max-width 0.5s cubic-bezier(0.68,-0.55,0.27,1.55);
+        }
+        /* Khi form đăng ký active thì mở rộng card */
+        .register-active .auth-wrapper {
+            max-width: 700px; /* Mở rộng đáng kể để chứa 2 cột */
+        }
+        
+        .card {
+            border-radius: 16px;
+            box-shadow: 0 8px 30px var(--shadow-medium);
+            border: none;
+            background: var(--card-bg);
+            overflow: hidden; /* Đảm bảo hiệu ứng slide không bị tràn */
+            position: relative;
+        }
+        .card-body {
+            padding: 2.5rem;
+            min-height: 500px; /* Điều chỉnh chiều cao tối thiểu cho login */
+            transition: min-height 0.5s cubic-bezier(0.68,-0.55,0.27,1.55);
+            position: relative;
+            /* overflow: hidden; */ /* Bỏ overflow hidden ở đây để form có thể cuộn bên trong */
+        }
+        .register-active .card-body {
+            min-height: 580px; /* Điều chỉnh chiều cao cho form đăng ký 2 cột */
+        }
+        
+        .form-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+        }
+        .input-group .input-group-text {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-right: none;
+            border-radius: 10px 0 0 10px;
+            padding: 0.85rem 1rem;
+            color: var(--primary-dark);
+            font-size: 1rem;
+        }
+        .input-group .form-control {
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+        .input-group .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 1rem;
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .form-links {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .form-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-links a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        .toggle-link {
+            font-weight: 500;
+        }
+        
+        /* Hiệu ứng chuyển động form */
+        .slide-form {
+            position: absolute;
+            top: 2.5rem;
+            left: 2.5rem;
+            right: 2.5rem;
+            opacity: 0;
+            transform: translateX(30px);
+            pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            width: calc(100% - 5rem);
+            height: calc(100% - 5rem); /* Đặt chiều cao để kích hoạt cuộn */
+            display: flex; /* Dùng flexbox để căn giữa nội dung */
+            flex-direction: column;
+        }
+        .slide-form.active {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+        .slide-form.slide-out-left {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        .slide-form.slide-out-right {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        /* Container có thể cuộn và ẩn thanh cuộn */
+        .scrollable-form-content {
+            flex-grow: 1; /* Cho phép nội dung cuộn chiếm hết không gian còn lại */
+            overflow-y: auto; /* Kích hoạt cuộn dọc khi nội dung tràn */
+            padding-right: 15px; /* Tạo khoảng trống để nội dung không bị ẩn dưới thanh cuộn ảo */
+            box-sizing: border-box; /* Đảm bảo padding được tính vào chiều rộng */
+        }
+
+        /* Ẩn thanh cuộn cho trình duyệt Webkit (Chrome, Safari, Edge dựa trên Chromium) */
+        .scrollable-form-content::-webkit-scrollbar {
+            width: 0 !important; /* Chiều rộng của thanh cuộn */
+            background: transparent; /* Màu nền của thanh cuộn */
+        }
+
+        /* Ẩn thanh cuộn cho Firefox */
+        .scrollable-form-content {
+            scrollbar-width: none; /* "none" để ẩn thanh cuộn */
+        }
+
+        /* Ẩn thanh cuộn cho IE và Edge cũ */
+        .scrollable-form-content {
+            -ms-overflow-style: none; /* Ẩn thanh cuộn */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-header h1 {
+                font-size: 2rem;
+            }
+            .main-header p {
+                font-size: 1rem;
+            }
+            .auth-wrapper {
+                max-width: 95%;
+            }
+            .register-active .auth-wrapper {
+                 max-width: 95%; /* Vẫn giữ 95% trên mobile */
+            }
+            .card-body {
+                padding: 1.5rem;
+                min-height: 480px;
+            }
+            .register-active .card-body {
+                min-height: 650px; /* Vẫn giữ chiều cao tương tự cho mobile khi đăng ký */
+            }
+            .slide-form {
+                top: 1.5rem;
+                left: 1.5rem;
+                right: 1.5rem;
+                width: calc(100% - 3rem);
+                height: calc(100% - 3rem);
+            }
+            .form-title {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
+            /* Trên mobile, các cột sẽ xếp chồng lên nhau */
+            .row > div[class*="col-"] {
+                width: 100%;
+                margin-bottom: 1.25rem; /* Khoảng cách giữa các trường */
+            }
+        }
+
+        .custom-toast {
+            position: fixed;
+            right: 32px;
+            bottom: 32px;
+            min-width: 320px;
+            max-width: 400px;
+            z-index: 9999;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 18px 28px;
+            font-size: 1.08rem;
+            font-weight: 500;
+            animation: slideUp 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+            text-align: left;
+        }
+        .toast-error {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+        .toast-success {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

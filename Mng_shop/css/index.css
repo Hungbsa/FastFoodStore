@@ -1,0 +1,133 @@
+body {
+    background: linear-gradient(135deg,#f8fafc 0%,#e0e7ef 100%);
+    min-height: 100vh;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    background: #fff;
+    color: #222;
+    padding-top: 32px;
+    transition: left 0.3s;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.sidebar.hide {
+    left: -240px;
+}
+.sidebar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #2563eb;
+}
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu li {
+    margin-bottom: 8px;
+}
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.08rem;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.sidebar-menu li.active a,
+.sidebar-menu li a:hover {
+    background: #10b981;
+    color: #fff;
+    font-weight: 600;
+}
+.sidebar-menu li a i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: inherit;
+}
+.sidebar-menu li a span {
+    font-weight: 500;
+}
+        .main-content {
+    margin-left: 240px;
+    transition: margin-left 0.3s;
+}
+.main-content.full {
+    margin-left: 0;
+}
+.topbar {
+    background: #fff;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.hamburger {
+    font-size: 2rem;
+    color: #2563eb;
+    cursor: pointer;
+    margin-right: 18px;
+}
+.topbar .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+.topbar .user {
+    margin-left: auto;
+    font-weight: 500;
+    color: #64748b;
+}
+.dashboard-content {
+    padding: 32px;
+}
+.card {
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.stat-icon {
+    font-size:2.2rem;
+    color:#2563eb;
+    margin-bottom:8px;
+}
+.stat-title {
+    font-weight:600;
+    color:#64748b;
+}
+.stat-value {
+    font-size:1.6rem;
+    font-weight:700;
+    color:#2563eb;
+}
+@media (max-width: 991px) {
+    .sidebar {
+        width: 180px;
+    }
+    .sidebar.hide {
+        left: -180px;
+    }
+    .main-content {
+        margin-left: 180px;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100vw;
+        left: -100vw;
+    }
+    .sidebar.hide {
+        left: -100vw;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}

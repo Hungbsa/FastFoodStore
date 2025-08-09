@@ -1,0 +1,126 @@
+
+        body { background: #f8fafc; }
+        .sidebar {
+            width: 260px;
+            background: #fff;
+            min-height: 100vh;
+            box-shadow: 2px 0 16px rgba(0,0,0,0.06);
+            position: fixed;
+            left: 0; top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            padding: 32px 24px 16px 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .sidebar-header .circle-logo {
+            width: 54px; height: 54px;
+            background: #16a34a; color: #fff;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin-bottom: 10px;
+        }
+        .sidebar-header h2 {
+            font-size: 1.3rem; font-weight: 700; color: #16a34a; margin-bottom: 2px;
+        }
+        .sidebar-header small { color: #888; }
+        .sidebar-user {
+            padding: 24px 24px 12px 24px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .sidebar-user .avatar {
+            width: 54px; height: 54px; border-radius: 50%; background: #e5e5e5; object-fit: cover;
+        }
+        .sidebar-user .user-info {
+            flex: 1;
+        }
+        .sidebar-user .user-info .name {
+            font-weight: 600; font-size: 1.1rem; color: #222;
+        }
+        .sidebar-user .user-info .phone {
+            color: #16a34a; font-size: 0.98rem;
+        }
+        .sidebar-menu {
+            flex: 1;
+            padding: 12px 0 0 0;
+        }
+        .sidebar-menu a {
+            display: block; padding: 12px 32px; color: #222; text-decoration: none; font-weight: 500;
+            border-left: 4px solid transparent; transition: background 0.2s;
+        }
+        .sidebar-menu a.active, .sidebar-menu a:hover {
+            background: #e7f9ef; color: #16a34a; border-left: 4px solid #16a34a;
+        }
+        .sidebar-menu i { margin-right: 10px; }
+        .sidebar-logout {
+            padding: 18px 32px; color: #ef4444; font-weight: 600; border-top: 1px solid #f0f0f0;
+        }
+        .main-content {
+            margin-left: 260px; padding: 32px 40px 24px 40px;
+        }
+        .top-toast {
+            position: fixed; top: 32px; right: 40px; z-index: 9999;
+            min-width: 320px; max-width: 400px;
+        }
+        .toast-box {
+            background: #16a34a; color: #fff; border-radius: 10px; box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 18px 28px; font-size: 1.08rem; font-weight: 500; display: flex; align-items: center; gap: 12px;
+            animation: slideDown 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dashboard-header { font-size: 2rem; font-weight: 700; color: #222; margin-bottom: 8px; }
+        .dashboard-sub { color: #666; font-size: 1.1rem; margin-bottom: 24px; }
+        .dashboard-cards { display: flex; gap: 18px; margin-bottom: 24px; }
+        .dashboard-card {
+            background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            flex: 1; padding: 18px 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+        }
+        .dashboard-card .card-title { font-size: 1.08rem; color: #666; font-weight: 500; }
+        .dashboard-card .card-value { font-size: 1.5rem; font-weight: 700; color: #16a34a; }
+        .dashboard-card .card-icon { font-size: 1.5rem; color: #16a34a; }
+        .dashboard-card .card-extra { font-size: 1rem; color: #888; }
+        .dashboard-card.rating { color: #f59e42; }
+        .dashboard-card.rating .card-value { color: #f59e42; }
+        .dashboard-card.rating .card-icon { color: #f59e42; }
+        .quick-actions { display: flex; gap: 18px; margin-bottom: 24px; }
+        .quick-btn {
+            flex: 1; border-radius: 8px; padding: 18px 0; font-size: 1.15rem; font-weight: 600; color: #fff; display: flex; align-items: center; justify-content: center; gap: 12px; cursor: pointer; border: none;
+        }
+        .quick-btn.green { background: #16a34a; }
+        .quick-btn.orange { background: #ea7c1c; }
+        .quick-btn.blue { background: #2563eb; }
+        .quick-btn i { font-size: 1.3rem; }
+        .orders-section { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); padding: 18px 22px; margin-bottom: 24px; }
+        .orders-header { font-size: 1.15rem; font-weight: 700; color: #222; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .orders-list { display: flex; flex-direction: column; gap: 12px; }
+        .order-item {
+            background: #f6f8fa; border-radius: 8px; padding: 12px 18px; display: flex; align-items: center; gap: 16px;
+        }
+        .order-icon {
+            width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff;
+        }
+        .order-icon.success { background: #16a34a; }
+        .order-icon.warning { background: #ea7c1c; }
+        .order-icon.primary { background: #2563eb; }
+        .order-info { flex: 1; }
+        .order-id { font-weight: 600; color: #222; }
+        .order-name { color: #444; font-size: 1rem; }
+        .order-address { color: #888; font-size: 0.98rem; }
+        .order-status {
+            font-weight: 600; font-size: 0.98rem; padding: 4px 12px; border-radius: 6px;
+        }
+        .order-status.success { background: #e7f9ef; color: #16a34a; }
+        .order-status.warning { background: #fff7e6; color: #ea7c1c; }
+        .order-status.primary { background: #e6f0ff; color: #2563eb; }
+        @media (max-width: 900px) {
+            .main-content { padding: 24px 8px 12px 8px; }
+            .dashboard-cards, .quick-actions { flex-direction: column; gap: 12px; }
+        }
+        @media (max-width: 600px) {
+            .sidebar { width: 100%; position: static; min-height: auto; box-shadow: none; }
+            .main-content { margin-left: 0; padding: 12px 2px; }
+        }
