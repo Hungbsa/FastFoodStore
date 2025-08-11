@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 04, 2025 lúc 04:52 AM
+-- Thời gian đã tạo: Th8 10, 2025 lúc 03:47 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -634,7 +634,7 @@ INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `
 (10, 'hunvipro', 'anhug', 'nguyen', 'potu@gmail.com', '0992374819', '25f9e794323b453885f5181f1b624d0b', '99,1/nuguyendu,nunanim,dian,dsd', 1, '2025-07-06 04:02:27', NULL, NULL, NULL),
 (13, 'viper', 'thor', 'snake', 'thor@gmail.com', '0987374568', '25f9e794323b453885f5181f1b624d0b', 'Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', 1, '2025-07-27 01:03:40', NULL, NULL, NULL),
 (14, 'porr2', 'dk', 'nguyen', 'nguyenjason504@gmail.com', '0947624877', '25f9e794323b453885f5181f1b624d0b', 'Đường tỉnh 122A, Khu phố Tân Bình, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', 1, '2025-08-01 06:42:14', NULL, '8a8cdea848cad96c02ec6b75641a051289562fe5ed92b302c1c631da6f9adea0', '2025-08-01 09:12:14'),
-(16, 'hungb', 'du', 'nguyen', 'pablpo0212@gmail.com', '0987473845', '25f9e794323b453885f5181f1b624d0b', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', 1, '2025-08-04 02:37:17', NULL, NULL, NULL);
+(16, 'hungb', 'du', 'nguyen', 'k.hung090804@gmail.com', '0987473845', '25f9e794323b453885f5181f1b624d0b', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', 1, '2025-08-09 10:43:51', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -693,8 +693,10 @@ INSERT INTO `users_orders` (`o_id`, `rs_id`, `u_id`, `title`, `quantity`, `price
 (87, 2, 14, 'Pink Spaghetti Gamberoni', 1, 525000.00, 'pending', 'Đường tỉnh 122A, Khu phố Tân Bình, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-04 02:32:51', '', 0.00, 525000.00, '2025-08-04 09:32:51', NULL, 0.00, NULL),
 (88, 5, 14, 'Gà tôm chiên rắc bột phô mai', 1, 197000.00, 'pending', 'Đường tỉnh 122A, Khu phố Tân Bình, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-04 02:34:44', '', 0.00, 197000.00, '2025-08-04 09:34:44', NULL, 0.00, NULL),
 (89, 2, 13, 'Pink Spaghetti Gamberoni', 1, 525000.00, 'pending', 'Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-04 02:36:05', 'WELCOME2025', 50000.00, 475000.00, '2025-08-04 09:36:05', NULL, 0.00, NULL),
-(90, 4, 16, ' Buffalo Wings', 1, 275000.00, 'pending', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-04 02:37:54', 'WELCOME2025', 50000.00, 225000.00, '2025-08-04 09:37:54', NULL, 0.00, NULL),
-(91, 4, 16, 'Chicken Madeira', 1, 575000.00, 'pending', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-04 02:49:31', 'WELCOME2025', 50000.00, 525000.00, '2025-08-04 09:49:31', NULL, 0.00, NULL);
+(90, 4, 16, ' Buffalo Wings', 1, 275000.00, 'in process', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-10 01:43:13', 'WELCOME2025', 50000.00, 225000.00, '2025-08-04 09:37:54', NULL, 0.00, NULL),
+(91, 4, 16, 'Chicken Madeira', 1, 575000.00, 'in process', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-10 01:43:10', 'WELCOME2025', 50000.00, 525000.00, '2025-08-04 09:49:31', NULL, 0.00, NULL),
+(92, 14, 16, 'Burger tôm+nước ngọt', 1, 50000.00, 'in process', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-10 01:43:07', '', 0.00, 50000.00, '2025-08-09 17:44:21', NULL, 0.00, NULL),
+(93, 4, 16, ' Buffalo Wings', 1, 275000.00, 'in process', 'Đường tỉnh 743A, Tân Long, Khu phố Tân Long, Phường Dĩ An, Thành phố Hồ Chí Minh, 75207, Việt Nam', '2025-08-10 01:43:03', '', 0.00, 275000.00, '2025-08-09 17:46:28', NULL, 0.00, NULL);
 
 -- --------------------------------------------------------
 
@@ -764,7 +766,8 @@ CREATE TABLE `worthy` (
 
 INSERT INTO `worthy` (`id`, `user_id`, `res_id`, `created_at`) VALUES
 (17, 9, 4, '2025-07-07 03:25:51'),
-(19, 1, 2, '2025-07-28 04:02:33');
+(19, 1, 2, '2025-07-28 04:02:33'),
+(25, 16, 4, '2025-08-10 01:41:14');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -1052,7 +1055,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `users_orders`
 --
 ALTER TABLE `users_orders`
-  MODIFY `o_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `o_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT cho bảng `users_shop`
@@ -1070,7 +1073,7 @@ ALTER TABLE `withdraw_requests`
 -- AUTO_INCREMENT cho bảng `worthy`
 --
 ALTER TABLE `worthy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

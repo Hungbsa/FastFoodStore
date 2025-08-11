@@ -24,7 +24,7 @@ function sendOrderSuccessMail($to, $username, $orderInfo, $orderItems, $total, $
         $mail->addAddress($to, $username);
 
         // Embed logo image (đường dẫn từ gốc project)
-        $logoPath = __DIR__ . '/../images/img/iconss.png';
+        $logoPath = __DIR__ . '../../images/img/iconss.png';
         if (file_exists($logoPath)) {
             $mail->addEmbeddedImage($logoPath, 'logoimg');
         }

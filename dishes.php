@@ -506,7 +506,7 @@ include_once 'product-action.php';
                                     } else {
                                         echo '<div style="text-align: center; padding: 30px 0; color: #888;">
                                                 <i class="fa fa-shopping-cart" style="font-size: 40px; opacity: 0.3; margin-bottom: 10px;"></i>
-                                                <p>Your cart is empty</p>
+                                                <p>Giỏ hàng của bạn trống</p>
                                             </div>';
                                     }
                                     ?>
@@ -564,7 +564,7 @@ include_once 'product-action.php';
     </button>
 <?php endif; ?>
 
-                        <!-- menu widget -->
+    <!-- menu widget -->
 <div class="menu-widget" id="menu-widget-2" style="font-family: 'Segoe UI', sans-serif;">
     <div class="widget-heading" style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
         <h3 class="widget-title text-dark" style="font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
@@ -630,8 +630,7 @@ include_once 'product-action.php';
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <input type="number" name="quantity" min="1" value="1" 
                                    style="width: 50px; padding: 5px; border: 1px solid #ddd; border-radius: 4px; text-align: center;">
-                            <button type="submit" style="background: #ff6b6b; color: white; border: none; 
-                                    padding: 5px 10px; border-radius: 4px; cursor: pointer;" type="button" class="add-to-cart-btn">
+                            <button type="submit" style="background: #ff6b6b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;" type="button" class="add-to-cart-btn">
                                 +
                             </button>
                         </div>
